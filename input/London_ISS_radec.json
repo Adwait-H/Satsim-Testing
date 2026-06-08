@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "sim": {
+    "mode": "fftconv2p",
+    "spacial_osf": 15,
+    "temporal_osf": 100,
+    "padding": 100,
+    "samples": 1
+  },
+  "fpa": {
+    "height": 512,
+    "width": 512,
+    "y_fov": 20.0,
+    "x_fov": 20.0,
+    "dark_current": 0.3,
+    "gain": 1,
+    "bias": 0,
+    "zeropoint": 20.6663,
+    "a2d": {
+      "response": "linear",
+      "fwc": 100000,
+      "gain": 1.5,
+      "bias": 1500
+    },
+    "noise": {
+      "read": 9,
+      "electronic": 0
+    },
+    "psf": {
+      "mode": "gaussian",
+      "eod": 0.15
+    },
+    "time": {
+      "exposure": 0.25,
+      "gap": 0.25
+    },
+    "num_frames": 6
+  },
+  "background": {
+    "stray": {
+      "mode": "none"
+    },
+    "galactic": 19.5
+  },
+  "geometry": {
+    "time": [2026, 3, 22, 21, 24, 45],
+    "site": {
+      "mode": "topo",
+      "lat": "51.5074 N",
+      "lon": "0.1278 W",
+      "alt": 0.3,
+      "gimbal": {
+        "mode": "wcs",
+        "rotation": 0
+      },
+      "track": {
+        "mode": "radec",
+        "ra": 65.7299,
+        "dec": 4.2095,
+        "track_apparent": false,
+        "name": "ISS pointing"
+      }
+    },
+    "stars": {
+      "mode": "csv",
+      "path": "hipparcos_satsim.csv",
+      "motion": {
+        "mode": "none"
+      }
+    },
+    "obs": {
+      "mode": "list",
+      "list": [
+        {
+          "mode": "tle",
+          "tle1": "1 25544U          26088.13267411 +.00000000 +00000-0 +23326-3 0 00001",
+          "tle2": "2 25544  51.6344 336.2407 0006215 245.2164 114.8178 15.48624340    05",
+          "mv": -0.7,
+          "name": "ISS"
+        }
+      ]
+    }
+  }
+}

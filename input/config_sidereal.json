@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "sim": {
+    "mode": "fftconv2p",
+    "spacial_osf": 15,
+    "temporal_osf": 100,
+    "padding": 100,
+    "samples": 1
+  },
+  "fpa": {
+    "height": 512,
+    "width": 512,
+    "y_fov": 5.0,
+    "x_fov": 5.0,
+    "dark_current": 0.3,
+    "gain": 1,
+    "bias": 0,
+    "zeropoint": 20.6663,
+    "a2d": {
+      "response": "linear",
+      "fwc": 100000,
+      "gain": 1.5,
+      "bias": 1500
+    },
+    "noise": {
+      "read": 9,
+      "electronic": 0
+    },
+    "psf": {
+      "mode": "gaussian",
+      "eod": 0.15
+    },
+    "time": {
+      "exposure": 0.5,
+      "gap": 0.5
+    },
+    "num_frames": 5
+  },
+  "background": {
+    "stray": {
+      "mode": "none"
+    },
+    "galactic": 19.5
+  },
+  "geometry": {
+    "time": [2026, 3, 26, 1, 21, 42],
+    "site": {
+      "mode": "topo",
+      "lat": "40.7945 N",
+      "lon": "77.8616 W",
+      "alt": 0.3,
+      "gimbal": {
+        "mode": "wcs",
+        "rotation": 0
+      },
+      "track": {
+        "mode": "fixed",
+        "az": 337.5,
+        "el": 61
+      }
+    },
+    "stars": {
+      "mode": "csv",
+      "path": "hipparcos_satsim.csv",
+      "motion": {
+        "mode": "none"
+      }
+    },
+    "obs": {
+      "mode": "list",
+      "list": [
+        {
+          "mode": "tle",
+          "tle1": "1 25544U 98067A   26083.80895787  .00009690  00000-0  18680-3 0  9991",
+          "tle2": "2 25544  51.6344 357.6177 0006258 228.0573 131.9883 15.48525391558676",
+          "mv": -2.0
+        }
+      ]
+    }
+  }
+}
